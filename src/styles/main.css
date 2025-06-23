@@ -1,0 +1,465 @@
+body {
+  background: #111;
+  color: #f5f5f5;
+  font-family: 'Roboto Slab', 'Times New Roman', serif;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#alley-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(180deg, #000 70%, #2d1a1a 100%);
+  z-index: 0;
+  overflow: hidden;
+}
+#fog {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  background: url('https://www.transparenttextures.com/patterns/fog.png') repeat-x;
+  opacity: 0.3;
+  z-index: 2;
+  animation: fogMove 30s linear infinite;
+}
+@keyframes fogMove {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
+#shadows {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 3;
+}
+
+#neon-sign {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  text-align: center;
+  width: 100vw;
+  pointer-events: none;
+  padding-top: 18px;
+  background: linear-gradient(180deg, #000 90%, transparent 100%);
+}
+.neon {
+  font-family: 'Special Elite', 'Roboto Slab', serif;
+  color: #ff2a2a;
+  text-shadow: 0 0 8px #ff2a2a, 0 0 20px #fff, 0 0 40px #b30000;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  animation: neon-flicker 2.5s infinite alternate;
+}
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  55% { opacity: 0.7; }
+}
+.subtitle {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px #b30000;
+}
+
+.neon-btn {
+  display: block;
+  margin: 40px auto 0 auto;
+  padding: 16px 36px;
+  background: #1a0000;
+  color: #fff;
+  border: 2px solid #ff2a2a;
+  border-radius: 8px;
+  font-family: 'Special Elite', serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff2a2a, 0 0 20px #b30000 inset;
+  transition: background 0.2s, color 0.2s;
+  animation: neon-flicker 2.5s infinite alternate;
+}
+.neon-btn:hover {
+  background: #ff2a2a;
+  color: #1a0000;
+}
+
+#main-board {
+  position: relative;
+  z-index: 5;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 10px 80px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+#case-board {
+  background: url('https://www.transparenttextures.com/patterns/cork-board.png');
+  background-size: cover;
+  border: 6px solid #6b3e26;
+  border-radius: 18px;
+  box-shadow: 0 0 40px #000a, 0 0 0 8px #2d1a1a inset;
+  padding: 32px 16px;
+  min-width: 340px;
+  min-height: 500px;
+  flex: 2 1 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.poster {
+  background: #1a0000cc;
+  border: 3px solid #bfa77a;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #000a, 0 0 0 4px #bfa77a inset;
+  padding: 12px 10px 18px 10px;
+  width: 180px;
+  min-height: 260px;
+  margin: 0 8px 16px 8px;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border 0.2s;
+  filter: sepia(0.7) grayscale(0.3) contrast(1.1);
+  overflow: hidden;
+  animation: poster-reveal 1.2s ease;
+}
+@keyframes poster-reveal {
+  from { opacity: 0; transform: translateY(40px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.poster:hover {
+  box-shadow: 0 0 24px #ff2a2a99, 0 0 0 6px #bfa77a inset;
+  border-color: #ff2a2a;
+}
+.poster-title {
+  font-family: 'Special Elite', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 8px 0 4px 0;
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px #b30000;
+  border-bottom: 1px dashed #bfa77a;
+  padding-bottom: 2px;
+  animation: typing 2s steps(20, end) 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.poster-desc {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.95rem;
+  color: #e0c7b7;
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+.poster-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #000a;
+  filter: sepia(0.7) grayscale(0.3) contrast(1.1);
+  margin-bottom: 6px;
+}
+
+#clue-map {
+  background: #222;
+  border: 3px solid #bfa77a;
+  border-radius: 12px;
+  box-shadow: 0 0 16px #000a, 0 0 0 4px #bfa77a44 inset;
+  min-width: 220px;
+  min-height: 320px;
+  flex: 1 1 220px;
+  margin-left: 12px;
+  position: relative;
+  padding: 18px 10px;
+}
+
+.case-file {
+  background: #181818ee;
+  border: 2px solid #bfa77a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000a, 0 0 0 2px #bfa77a inset;
+  margin: 24px auto;
+  padding: 24px 18px;
+  max-width: 600px;
+  font-family: 'Special Elite', serif;
+  color: #fff;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+#contact-form input, #contact-form textarea {
+  background: #222;
+  border: 1px solid #bfa77a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: 'Special Elite', serif;
+  font-size: 1rem;
+}
+#contact-form button {
+  margin-top: 10px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.icon-instagram, .icon-email, .icon-whatsapp {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid #bfa77a;
+  box-shadow: 0 0 6px #bfa77a44;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.icon-instagram {
+  background-image: url('../assets/images/instagram.svg');
+}
+.icon-email {
+  background-image: url('../assets/images/email.svg');
+}
+.icon-whatsapp {
+  background-image: url('../assets/images/whatsapp.svg');
+}
+.icon-instagram:hover, .icon-email:hover, .icon-whatsapp:hover {
+  border: 2px solid #ff2a2a;
+  box-shadow: 0 0 12px #ff2a2a99;
+}
+
+@media (max-width: 900px) {
+  #main-board {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  #case-board, #clue-map {
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  #neon-sign h1 { font-size: 1.2rem; }
+  .neon { font-size: 1.3rem; }
+  #main-board { padding: 10px 2px 40px 2px; }
+  .poster { width: 98vw; min-width: unset; }
+}
+
+#case-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  pointer-events: none;
+}
+#case-modal.show {
+  pointer-events: all;
+}
+.case-modal-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: radial-gradient(ellipse at center, #000c 60%, #000f 100%);
+  animation: smokeIn 0.7s;
+  z-index: 1;
+}
+@keyframes smokeIn {
+  from { opacity: 0; filter: blur(16px); }
+  to { opacity: 1; filter: blur(0); }
+}
+.case-modal-content {
+  position: relative;
+  z-index: 2;
+  background: #181818ee url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  border: 4px solid #bfa77a;
+  border-radius: 18px 18px 32px 32px;
+  box-shadow: 0 0 40px #000a, 0 0 0 8px #bfa77a44 inset;
+  padding: 32px 24px 24px 24px;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: modalReveal 0.7s;
+}
+@keyframes modalReveal {
+  from { opacity: 0; transform: scale(0.8) translateY(60px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.close-modal {
+  position: absolute;
+  top: 10px; right: 18px;
+  background: #1a0000;
+  color: #ff2a2a;
+  border: 2px solid #bfa77a;
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  font-size: 2rem;
+  font-family: 'Special Elite', serif;
+  cursor: pointer;
+  box-shadow: 0 0 8px #bfa77a44;
+  transition: background 0.2s, color 0.2s;
+  z-index: 3;
+}
+.close-modal:hover {
+  background: #ff2a2a;
+  color: #fff;
+}
+.modal-img-wrap {
+  width: 220px;
+  height: 220px;
+  background: #1a0000;
+  border: 2px solid #bfa77a;
+  border-radius: 12px;
+  box-shadow: 0 0 16px #000a;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: sepia(0.7) grayscale(0.3) contrast(1.1);
+}
+.modal-title {
+  font-family: 'Special Elite', serif;
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 8px 0 4px 0;
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px #b30000;
+  border-bottom: 1px dashed #bfa77a;
+  padding-bottom: 2px;
+}
+.modal-desc {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.05rem;
+  color: #e0c7b7;
+  margin-bottom: 8px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .case-modal-content { min-width: 90vw; padding: 12px 4px; }
+  .modal-img-wrap { width: 90vw; height: 40vw; min-height: 120px; }
+}
+
+.shadow-figure {
+  position: absolute;
+  left: -10vw;
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(90deg, #000a 60%, transparent 100%);
+  border-radius: 30px 30px 40px 40px;
+  opacity: 0.18;
+  filter: blur(2px);
+  animation: shadow-move 8s linear infinite;
+}
+@keyframes shadow-move {
+  0% { left: -10vw; opacity: 0.18; }
+  10% { opacity: 0.28; }
+  50% { left: 110vw; opacity: 0.22; }
+  90% { opacity: 0.10; }
+  100% { left: 110vw; opacity: 0; }
+}
+.lamp-post {
+  position: absolute;
+  bottom: 0;
+  width: 18px;
+  height: 180px;
+  background: #222;
+  border-radius: 8px 8px 4px 4px;
+  box-shadow: 0 0 8px #000a;
+  z-index: 4;
+}
+.lamp-light {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 38px;
+  background: radial-gradient(circle, #fffbe6 0%, #ff2a2a44 60%, transparent 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 32px 8px #fffbe6, 0 0 80px 24px #ff2a2a33;
+  opacity: 0.85;
+  animation: lamp-blink 3.5s infinite;
+}
+@keyframes lamp-blink {
+  0%, 100% { opacity: 0.85; filter: brightness(1.1); }
+  8% { opacity: 0.3; filter: brightness(0.7); }
+  10% { opacity: 0.85; filter: brightness(1.1); }
+  60% { opacity: 0.7; }
+  65% { opacity: 0.2; filter: brightness(0.5); }
+  70% { opacity: 0.85; filter: brightness(1.1); }
+}
+
+#audio-controls {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2000;
+  background: #181818ee;
+  border: 2px solid #bfa77a;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #000a;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+}
+#audio-controls button {
+  background: none;
+  border: none;
+  color: #ff2a2a;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s;
+  font-family: 'Special Elite', serif;
+}
+#audio-controls button:hover {
+  color: #fffbe6;
+}
+
+.main-board-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 32px;
+}
+@media (max-width: 900px) {
+  .main-board-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+} 

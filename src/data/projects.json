@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "titulo": "Matou - O Rato Diretor",
+    "descricao": "O mistério dos bastidores de um filme inusitado.",
+    "imagem": "IMG-20250619-WA0091.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "O Observador Vermelho",
+    "descricao": "Uma investigação sobre identidades ocultas e o olhar que tudo vê.",
+    "imagem": "IMG-20250619-WA0092.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "A Testemunha do Fogo",
+    "descricao": "Relato sombrio de quem viu demais em meio ao caos.",
+    "imagem": "IMG-20250619-WA0093.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Dupla Natureza",
+    "descricao": "Dois lados, um só coração: o caso dos gêmeos improváveis.",
+    "imagem": "IMG-20250619-WA0094.jpg"
+  },
+  {
+    "id": 5,
+    "titulo": "O Enigma do Olhar Circular",
+    "descricao": "Uma figura misteriosa que desafia a lógica e a percepção.",
+    "imagem": "IMG-20250619-WA0095.jpg"
+  },
+  {
+    "id": 6,
+    "titulo": "A Sereia de Prata",
+    "descricao": "Beleza e mistério em um cenário de tons rubros e prateados.",
+    "imagem": "IMG-20250619-WA0096.jpg"
+  },
+  {
+    "id": 7,
+    "titulo": "Hello, S4tur0",
+    "descricao": "Uma saudação enigmática vinda do outro lado da janela.",
+    "imagem": "IMG-20250619-WA0097.jpg"
+  },
+  {
+    "id": 8,
+    "titulo": "O Circo dos Olhos Dourados",
+    "descricao": "Entre o riso e o medo, um espetáculo de segredos.",
+    "imagem": "IMG-20250619-WA0098.jpg"
+  },
+  {
+    "id": 9,
+    "titulo": "A Guardiã Carmesim",
+    "descricao": "Força e magia em um universo de fantasia e poder.",
+    "imagem": "IMG-20250619-WA0099.jpg"
+  },
+  {
+    "id": 10,
+    "titulo": "A Festa do Mistério",
+    "descricao": "Noite de segredos sob estrelas e chapéus de festa.",
+    "imagem": "IMG-20250619-WA0100.jpg"
+  },
+  {
+    "id": 11,
+    "titulo": "O Sorriso Azul",
+    "descricao": "Uma criatura travessa e encantadora, perdida no céu.",
+    "imagem": "IMG-20250619-WA0101.jpg"
+  }
+] 

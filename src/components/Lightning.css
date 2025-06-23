@@ -1,0 +1,23 @@
+.lightning-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.lightning-flash.flashing {
+  animation: flash-kf 0.4s ease-out;
+}
+
+@keyframes flash-kf {
+  0% { opacity: 0; }
+  10% { opacity: 0.6; }
+  20% { opacity: 0.2; }
+  30% { opacity: 0.8; }
+  100% { opacity: 0; }
+} 

@@ -1,0 +1,159 @@
+.extras-section {
+  max-width: 900px;
+  margin: 48px auto 0 auto;
+  background: #181818ee url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  border: 3px solid #bfa77a;
+  border-radius: 18px;
+  box-shadow: 0 0 24px #000a, 0 0 0 8px #bfa77a44 inset;
+  padding: 36px 24px 32px 24px;
+  overflow: hidden;
+}
+.extras-flex {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.extras-sounds, .extras-depo, .extras-diario {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 18px;
+  border-radius: 12px;
+  border: 2px solid #bfa77a;
+}
+.extras-sounds h3, .extras-depo h3, .extras-diario h3 {
+  font-family: 'Special Elite', serif;
+  color: #ff2a2a;
+  margin-top: 0;
+  border-bottom: 1px dashed #bfa77a;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+.sound-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sound-btn {
+  background: #2c2c2c;
+  border: 1px solid #bfa77a;
+  color: #fffbe6;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.sound-btn:hover {
+  background: #3a3a3a;
+  box-shadow: 0 0 8px #ff2a2a99;
+}
+.sound-btn.playing {
+  background: #ff2a2a;
+  color: #fff;
+  font-weight: bold;
+}
+.sound-icon {
+  font-size: 1.2rem;
+}
+.depoimento {
+  margin-bottom: 16px;
+  border-left: 3px solid #ff2a2a;
+  padding-left: 12px;
+  font-style: italic;
+  color: #e0c7b7;
+}
+.depo-text {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+.depo-autor {
+  font-size: 0.95rem;
+  color: #bfa77a;
+}
+.extras-galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+}
+.sketches {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 40px;
+}
+.sketch-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #bfa77a;
+  box-shadow: 0 0 6px #000a;
+  filter: sepia(0.7) grayscale(0.3) contrast(1.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.sketch-img:hover {
+  transform: scale(1.08) rotate(-2deg);
+  border-color: #ff2a2a;
+}
+.extras-secret {
+  margin-top: 24px;
+  text-align: center;
+}
+.secret-btn {
+  background: #1a0000;
+  color: #fffbe6;
+  border: 2px solid #bfa77a;
+  border-radius: 8px;
+  font-family: 'Special Elite', serif;
+  font-size: 1.1rem;
+  padding: 8px 22px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #bfa77a44;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.secret-btn:hover {
+  background: #ff2a2a;
+  color: #fff;
+  border-color: #ff2a2a;
+}
+.secret-content {
+  margin-top: 14px;
+  background: #222c;
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: #fffbe6;
+  font-family: 'Special Elite', serif;
+  font-size: 1.1rem;
+  border: 2px dashed #bfa77a;
+  box-shadow: 0 0 8px #bfa77a44;
+  animation: secret-reveal 1s;
+}
+@keyframes secret-reveal {
+  from { opacity: 0; filter: blur(8px); }
+  to { opacity: 1; filter: blur(0); }
+}
+.extras-diario ul {
+  list-style: disc inside;
+  padding-left: 0;
+  color: #e0c7b7;
+  font-family: 'Special Elite', serif;
+  font-size: 1.05rem;
+}
+@media (max-width: 900px) {
+  .extras-flex { 
+    flex-direction: column; 
+    gap: 18px; 
+  }
+}
+ 

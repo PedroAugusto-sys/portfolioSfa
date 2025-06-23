@@ -1,0 +1,56 @@
+.neonSign {
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  padding-top: 32px;
+  z-index: 1001;
+}
+
+.neonSign::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 42, 42, 0.15) 0%, rgba(255, 42, 42, 0) 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.neonText {
+  font-family: 'Special Elite', 'Crimson Text', serif;
+  color: #fff;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 5px #ff2a2a,
+    0 0 15px #ff2a2a,
+    0 0 30px #ff2a2a,
+    0 0 50px #ff2a2a,
+    0 0 80px #b30000,
+    0 0 120px #b30000;
+  animation: neon-flicker 2.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  55% { opacity: 0.7; }
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px #b30000;
+}
+
+@media (max-width: 600px) {
+  .neonText { font-size: 1.3rem; }
+  .subtitle { font-size: 1rem; }
+  .neonSign { padding-top: 12px; }
+} 
