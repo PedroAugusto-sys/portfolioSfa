@@ -16,7 +16,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "^5.0.1",
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "howler": "^2.2.4"
   },
   "browserslist": {
     "production": [
