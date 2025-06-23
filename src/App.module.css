@@ -23,14 +23,36 @@
   gap: 40px;
 }
 
+/* Melhorias para Mobile */
 @media (max-width: 768px) {
   .mainBg {
     padding: 60px 10px 30px 10px;
   }
 
   .mainContent {
-    gap: 40px;
+    gap: 30px;
     padding: 10px;
+  }
+
+  .introContainer {
+    height: 70vh;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainBg {
+    padding: 50px 5px 20px 5px;
+  }
+
+  .mainContent {
+    gap: 25px;
+    padding: 5px;
+  }
+
+  .introContainer {
+    height: 60vh;
+    gap: 25px;
   }
 }
 
@@ -69,6 +91,23 @@
   animation: noir-flicker 0.5s infinite alternate;
 }
 
+/* Responsividade para o botão */
+@media (max-width: 768px) {
+  :global(.neon-btn.noir-btn) {
+    padding: 14px 28px;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  :global(.neon-btn.noir-btn) {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+}
+
 @keyframes noir-flicker {
   0%, 100% { opacity: 1; }
   45% { opacity: 0.7; }
@@ -85,4 +124,21 @@
   flex-direction: column;
   gap: 15px;
   align-items: flex-end;
+}
+
+/* Melhorias para Mobile - Controles de UI */
+@media (max-width: 768px) {
+  .uiControls {
+    top: 20px;
+    right: 20px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .uiControls {
+    top: 15px;
+    right: 15px;
+    gap: 10px;
+  }
 } 

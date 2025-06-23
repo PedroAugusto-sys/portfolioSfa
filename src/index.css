@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Previne scroll horizontal */
 }
 
 code {
@@ -14,4 +15,54 @@ code {
 
 * {
   box-sizing: border-box;
+}
+
+/* Melhorias globais para mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Reduz ligeiramente o tamanho base da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px; /* Reduz ainda mais para telas muito pequenas */
+  }
+}
+
+/* Melhorias para touch em dispositivos móveis */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects em dispositivos touch */
+  .case-card:hover {
+    transform: none;
+  }
+  
+  .sound-btn:hover {
+    background: #2c2c2c;
+    box-shadow: none;
+  }
+  
+  .contact-icon-link:hover {
+    border: 2px solid #bfa77a;
+    box-shadow: 0 0 6px #bfa77a44;
+  }
+  
+  .secret-btn:hover {
+    background: #1a0000;
+    color: #fffbe6;
+    border-color: #bfa77a;
+  }
+}
+
+/* Melhorias para acessibilidade em mobile */
+@media (max-width: 768px) {
+  /* Aumenta área de toque para botões */
+  button, 
+  .case-card,
+  .sound-btn,
+  .contact-icon-link {
+    min-height: 44px; /* Mínimo recomendado para touch */
+  }
+  
+  /* Melhora es
 } 

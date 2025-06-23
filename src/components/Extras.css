@@ -150,10 +150,81 @@
   font-family: 'Special Elite', serif;
   font-size: 1.05rem;
 }
+/* Melhorias para Mobile */
 @media (max-width: 900px) {
-  .extras-flex { 
-    flex-direction: column; 
-    gap: 18px; 
+  .extras-section {
+    margin: 30px auto 0 auto;
+    padding: 24px 16px 20px 16px;
+  }
+
+  .extras-flex {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .extras-sounds, .extras-depo, .extras-diario {
+    padding: 15px;
+  }
+
+  .sound-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .depo-text {
+    font-size: 1rem;
+  }
+
+  .extras-diario ul {
+    font-size: 1rem;
+  }
+
+  .secret-btn {
+    font-size: 1rem;
+    padding: 6px 18px;
+  }
+
+  .secret-content {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .extras-section {
+    margin: 20px auto 0 auto;
+    padding: 20px 12px 16px 12px;
+  }
+
+  .extras-flex {
+    gap: 15px;
+  }
+
+  .extras-sounds, .extras-depo, .extras-diario {
+    padding: 12px;
+  }
+
+  .sound-btn {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .depo-text {
+    font-size: 0.95rem;
+  }
+
+  .extras-diario ul {
+    font-size: 0.95rem;
+  }
+
+  .secret-btn {
+    font-size: 0.9rem;
+    padding: 5px 15px;
+  }
+
+  .secret-content {
+    font-size: 0.9rem;
+    padding: 10px 14px;
   }
 }
  

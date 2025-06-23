@@ -49,8 +49,63 @@
   text-shadow: 0 0 6px #b30000;
 }
 
+/* Melhorias para Mobile */
+@media (max-width: 768px) {
+  .neonSign {
+    padding-top: 20px;
+  }
+
+  .neonText {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .neonSign::before {
+    width: 300px;
+    height: 150px;
+  }
+}
+
 @media (max-width: 600px) {
-  .neonText { font-size: 1.3rem; }
-  .subtitle { font-size: 1rem; }
-  .neonSign { padding-top: 12px; }
+  .neonSign {
+    padding-top: 15px;
+  }
+
+  .neonText {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .neonSign::before {
+    width: 250px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .neonSign {
+    padding-top: 12px;
+  }
+
+  .neonText {
+    font-size: 1.3rem;
+    letter-spacing: 0.8px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .neonSign::before {
+    width: 200px;
+    height: 100px;
+  }
 } 

@@ -35,9 +35,30 @@
   position: relative;
 }
 @media (max-width: 600px) {
-  .clue-map { min-width: 98vw; max-width: 98vw; }
-  .clue-map svg { width: 98vw; height: 60vw; }
-  .clue-tooltip { max-width: 150px; font-size: 0.8rem; }
+  .clue-map {
+    min-width: 280px;
+    max-width: 280px;
+    margin: 20px auto 0 auto;
+    padding: 15px 8px 8px 8px;
+  }
+  .clue-map-label {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    padding: 6px 10px;
+  }
+}
+@media (max-width: 480px) {
+  .clue-map {
+    min-width: 260px;
+    max-width: 260px;
+    margin: 15px auto 0 auto;
+    padding: 12px 6px 6px 6px;
+  }
+  .clue-map-label {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 5px 8px;
+  }
 }
 
 /* Efeitos para os pontos */

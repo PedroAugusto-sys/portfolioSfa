@@ -66,7 +66,65 @@
   line-height: 1.6;
 }
 
+/* Melhorias para Mobile */
 @media (max-width: 600px) {
-  .case-modal-content { min-width: 90vw; padding: 12px 4px; }
-  .modal-img-wrap { width: 90vw; height: 40vw; min-height: 120px; }
+  .case-modal-content {
+    width: 95%;
+    padding: 20px 16px;
+    margin: 10px;
+  }
+
+  .close-modal {
+    top: 8px;
+    right: 8px;
+    font-size: 1.8rem;
+  }
+
+  .modal-img-wrap {
+    margin-bottom: 12px;
+    padding: 6px;
+  }
+
+  .modal-img {
+    max-height: 300px;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-modal-content {
+    width: 98%;
+    padding: 16px 12px;
+    margin: 5px;
+  }
+
+  .close-modal {
+    top: 6px;
+    right: 6px;
+    font-size: 1.6rem;
+  }
+
+  .modal-img-wrap {
+    margin-bottom: 10px;
+    padding: 4px;
+  }
+
+  .modal-img {
+    max-height: 250px;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-desc {
+    font-size: 0.9rem;
+  }
 } 

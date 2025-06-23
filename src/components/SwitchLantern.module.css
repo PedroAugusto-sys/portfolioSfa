@@ -47,9 +47,29 @@
   letter-spacing: 1px;
   text-shadow: 0 0 4px #b30000;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .switchLantern {
     font-size: 1rem;
+    gap: 8px;
+  }
+  .slider {
+    width: 42px;
+    height: 24px;
+  }
+  .slider:before {
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    top: 3px;
+  }
+  .switchLantern input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+}
+@media (max-width: 480px) {
+  .switchLantern {
+    font-size: 0.9rem;
+    gap: 6px;
   }
   .slider {
     width: 38px;
@@ -60,5 +80,8 @@
     height: 14px;
     left: 3px;
     top: 3px;
+  }
+  .switchLantern input:checked + .slider:before {
+    transform: translateX(16px);
   }
 } 

@@ -90,6 +90,52 @@
   box-shadow: 0 0 12px #ff2a2a99;
 }
 @media (max-width: 600px) {
-  .contact-section { padding: 12px 4px; }
-  .contact-icons { gap: 10px; }
+  .contact-section {
+    margin: 30px auto 0 auto;
+    padding: 24px 16px 20px 16px;
+  }
+  .telegram-form input,
+  .telegram-form textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+  .telegram-form textarea {
+    min-height: 70px;
+  }
+  .typed-preview {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+  .contact-icons {
+    gap: 15px;
+  }
+  .contact-icon-link {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-section {
+    margin: 20px auto 0 auto;
+    padding: 20px 12px 16px 12px;
+  }
+  .telegram-form input,
+  .telegram-form textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .telegram-form textarea {
+    min-height: 60px;
+  }
+  .typed-preview {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  .contact-icons {
+    gap: 12px;
+  }
+  .contact-icon-link {
+    width: 32px;
+    height: 32px;
+  }
 } 
